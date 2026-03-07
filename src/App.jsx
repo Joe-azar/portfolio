@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -223,6 +224,7 @@ const languages = [
 
 export default function PortfolioJoeAzar() {
   return (
+    <>
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.16),transparent_30%),radial-gradient(circle_at_top_left,rgba(168,85,247,0.12),transparent_25%)]" />
 
@@ -546,5 +548,7 @@ export default function PortfolioJoeAzar() {
         </section>
       </main>
     </div>
+    <Analytics />
+  </>
   );
 }
