@@ -20,6 +20,17 @@ import {
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import profileImg from "./assets/profile.jpg";
+import bacImg from "./assets/bac3.jpg";
+import universiteImg from "./assets/universite.jpg";
+import franceImg from "./assets/france.jpg";
+import burgerKingImg from "./assets/burger-king.jpg";
+import iyooImg from "./assets/iyoo.jpg";
+import deltexplanStageImg from "./assets/deltexplan-stage.jpg";
+import deltexplanAltImg from "./assets/deltexplan-alt.jpg";
+import soutenanceImg from "./assets/soutenance.jpg";
+import diplomeImg from "./assets/diplome.jpg";
+import deltexplanCdiImg from "./assets/deltexplan-cdi.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -31,61 +42,61 @@ const timeline = [
     period: "2018",
     title: "Obtention du baccalauréat scientifique",
     text: "Première étape d’un parcours construit autour de la rigueur et de l’ambition académique.",
-    image: "Photo du baccalauréat",
+    image: bacImg,
   },
   {
     period: "2019 – 2022",
     title: "Université Antonine — Cycle ingénieur",
     text: "Trois années d’études en informatique et télécommunications au Liban.",
-    image: "Photo ou souvenir de l’université",
+    image: universiteImg,
   },
   {
     period: "2022",
     title: "Arrivée en France",
     text: "Début d’un nouveau chapitre, avec adaptation, autonomie et gestion complète du quotidien.",
-    image: "Photo liée à l’arrivée en France",
+    image: franceImg,
   },
   {
     period: "2022 – 2024",
     title: "Job étudiant — Burger King",
     text: "Travail sous stress, sens des responsabilités, polyvalence, employé du mois et formation de nouveaux équipiers.",
-    image: "Photo ou visuel Burger King",
+    image: burgerKingImg,
   },
   {
     period: "06/2023 – 08/2023",
     title: "Stage — IYOO Talents",
     text: "Première expérience professionnelle en développement web, menée en parallèle du job étudiant.",
-    image: "Capture ou visuel du stage",
+    image: iyooImg,
   },
   {
     period: "05/2024 – 08/2024",
     title: "Stage — Deltexplan",
     text: "Début de mon implication sur la GED métier et découverte concrète des besoins utilisateurs.",
-    image: "Capture du stage Deltexplan",
+    image: deltexplanStageImg,
   },
   {
     period: "09/2024 – 09/2025",
     title: "Alternance — Deltexplan",
     text: "Montée en responsabilité sur les modules métiers, les workflows internes et le suivi utilisateur.",
-    image: "Capture ou photo alternance",
+    image: deltexplanAltImg,
   },
   {
     period: "2025",
     title: "Soutenance de fin d’études",
     text: "Soutenance notée 18/20 avec félicitations du jury, marquant l’aboutissement académique du parcours.",
-    image: "Photo de la soutenance",
+    image: soutenanceImg,
   },
   {
     period: "2025",
     title: "Remise de diplôme",
     text: "Moment symbolique qui concrétise plusieurs années d’effort, de progression et de persévérance.",
-    image: "Photo de remise de diplôme",
+    image: diplomeImg,
   },
   {
     period: "09/2025 – Présent",
     title: "CDI — Deltexplan",
     text: "Poursuite du développement et de l’amélioration de la GED devenue un outil central pour l’entreprise.",
-    image: "Capture ou visuel CDI Deltexplan",
+    image: deltexplanCdiImg,
   },
 ];
 
@@ -216,10 +227,10 @@ const projectGroups = [
 const qualities = ["Organisé", "Autonome", "Responsable", "Sérieux", "Débrouillard", "Perfectionniste"];
 const passions = ["Sport", "Football", "Musculation"];
 const languages = [
-  { flag: "🇫🇷", name: "Français", level: "Bilingue" },
-  { flag: "🇬🇧", name: "Anglais", level: "TOEIC 900" },
-  { flag: "🇱🇧", name: "Arabe", level: "Langue maternelle" },
-  { flag: "🇪🇸", name: "Espagnol", level: "Débutant" },
+  { flag: "fr", name: "Français", level: "Bilingue" },
+  { flag: "gb", name: "Anglais", level: "TOEIC 900" },
+  { flag: "lb", name: "Arabe", level: "Langue maternelle" },
+  { flag: "es", name: "Espagnol", level: "Notions" },
 ];
 
 export default function PortfolioJoeAzar() {
@@ -274,16 +285,13 @@ export default function PortfolioJoeAzar() {
             <Card className="rounded-[2rem] border-white/10 bg-white/5 shadow-2xl shadow-cyan-950/20">
               <CardContent className="p-8">
                 <div className="mb-8 space-y-5">
-                  <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-cyan-500/20 via-blue-500/10 to-purple-500/10">
-                    <div className="flex h-64 items-center justify-center text-center text-slate-300">
-                      <div className="max-w-[80%]">
-                        <p className="text-sm uppercase tracking-[0.25em] text-cyan-200">Photo principale</p>
-                        <p className="mt-3 text-xl font-semibold text-white">Ajoutez ici votre meilleure photo professionnelle</p>
-                        <p className="mt-3 text-sm leading-6 text-slate-300">Idéalement un portrait propre, naturel et lumineux, pour humaniser immédiatement votre profil.</p>
-                      </div>
-                    </div>
+                  <div className="overflow-hidden rounded-[1.75rem] border border-white/10">
+                    <img
+                      src={profileImg}
+                      alt="Photo de Joe Azar"
+                      className="h-64 w-full object-cover"
+                    />
                   </div>
-
                   <div>
                     <h2 className="text-2xl font-semibold text-white">Joe Azar</h2>
                     <p className="text-slate-300">Ingénieur logiciel / Développeur full-stack</p>
@@ -334,13 +342,12 @@ export default function PortfolioJoeAzar() {
                         <p className="mt-2 leading-7 text-slate-300">{item.text}</p>
                       </div>
 
-                      <div className="overflow-hidden rounded-[1.25rem] border border-white/10 bg-gradient-to-br from-cyan-500/15 via-blue-500/10 to-purple-500/10">
-                        <div className="flex h-32 items-center justify-center px-4 text-center">
-                          <div>
-                            <p className="text-xs uppercase tracking-[0.22em] text-cyan-200">Image</p>
-                            <p className="mt-2 text-sm font-medium text-white">{item.image}</p>
-                          </div>
-                        </div>
+                      <div className="overflow-hidden rounded-[1.25rem] border border-white/10">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="h-40 w-full object-cover"
+                        />
                       </div>
                     </div>
                   </CardContent>
@@ -497,9 +504,14 @@ export default function PortfolioJoeAzar() {
                   </div>
                   <div className="space-y-3">
                     {languages.map((language) => (
-                      <div key={language.name} className="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-900/70 px-4 py-3">
+                      <div
+                        key={language.name}
+                        className="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-900/70 px-4 py-3"
+                      >
                         <div className="flex items-center gap-3">
-                          <span className="text-xl">{language.flag}</span>
+                          <span
+                            className={`fi fi-${language.flag} rounded-sm text-xl leading-none`}
+                          ></span>
                           <span className="text-white">{language.name}</span>
                         </div>
                         <span className="text-sm text-cyan-200">{language.level}</span>
